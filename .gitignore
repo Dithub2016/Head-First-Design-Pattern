@@ -1,0 +1,4 @@
+/dist
+node_modules/
+HeadFirst设计模式（中文版）.pdf
+package-lock.json
