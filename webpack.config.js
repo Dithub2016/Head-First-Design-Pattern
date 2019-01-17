@@ -1,11 +1,16 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     devtool: 'inline-source-map',
-    entry: './src/Duck.ts',
+    context: path.resolve(__dirname, 'src'),
+    entry: {
+        Duck: './Duck.ts',
+        Character: './Character.ts',
+    },
     output: {
-        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js',
     },
     resolve: {
         extensions: ['.ts'],

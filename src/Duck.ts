@@ -48,6 +48,8 @@ abstract class Duck {
     public setQuackBehavior(qb: QuackBehavior): void {
         this.quackBehavior = qb;
     }
+    // 把行为委托给其它，行为类
+    // 同时也是一种策略模式的实现
     public performQuack(): void {
         this.quackBehavior.quack();
     }
@@ -55,6 +57,8 @@ abstract class Duck {
     public setFlyBehavior(fb: FlyBehavior): void {
         this.flyBehavior = fb;
     }
+    // 把行为委托给其它，行为类
+    // 同时也是一种策略模式的实现
     public performFly(): void {
         this.flyBehavior.fly();
     }
